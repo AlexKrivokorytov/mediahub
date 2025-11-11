@@ -1,0 +1,27 @@
+{
+  "productName": "Media Hub",
+  "version": "0.1.0",
+  "identifier": "com.media.mediahub",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:5173"
+  },
+  "bundle": {
+    "icon": ["icons/icon.ico"]
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "Media Hub",
+        "width": 1200,
+        "height": 800,
+        "resizable": true,
+        "fullscreen": false,
+        "visible": true
+      }
+    ]
+  }
+}

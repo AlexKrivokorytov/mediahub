@@ -1,0 +1,14 @@
+C:\Users\krivo\Desktop\Rust\media-hub\src-tauri\target2\debug\deps\serde-b7b2209da6550184.d: C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs C:\Users\krivo\Desktop\Rust\media-hub\src-tauri\target2\debug\build\serde-7176227cfad44f4b\out/private.rs
+
+C:\Users\krivo\Desktop\Rust\media-hub\src-tauri\target2\debug\deps\libserde-b7b2209da6550184.rlib: C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs C:\Users\krivo\Desktop\Rust\media-hub\src-tauri\target2\debug\build\serde-7176227cfad44f4b\out/private.rs
+
+C:\Users\krivo\Desktop\Rust\media-hub\src-tauri\target2\debug\deps\libserde-b7b2209da6550184.rmeta: C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs C:\Users\krivo\Desktop\Rust\media-hub\src-tauri\target2\debug\build\serde-7176227cfad44f4b\out/private.rs
+
+C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs:
+C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs:
+C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs:
+C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs:
+C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs:
+C:\Users\krivo\Desktop\Rust\media-hub\src-tauri\target2\debug\build\serde-7176227cfad44f4b\out/private.rs:
+
+# env-dep:OUT_DIR=C:\\Users\\krivo\\Desktop\\Rust\\media-hub\\src-tauri\\target2\\debug\\build\\serde-7176227cfad44f4b\\out

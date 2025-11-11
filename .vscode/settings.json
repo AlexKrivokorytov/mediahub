@@ -1,0 +1,19 @@
+{
+  // Отключить автоматическое выполнение cargo check при сохранении
+  "rust-analyzer.checkOnSave.enable": false,
+
+  // Указать отдельную папку сборки для rust‑analyzer (например "target2")
+  "rust-analyzer.cargo.targetDir": "target2",
+
+  // Настроить поведение build‑скриптов/проц‑макросов в rust‑analyzer
+  "rust-analyzer.cargo.buildScripts.rebuildOnSave": false,
+
+  // Исключить папку сборки из наблюдения VS Code (во избежание лишнего доступа)
+  "files.watcherExclude": {
+    "**/target2/**": true
+  },
+  "files.exclude": {
+    "**/target2/**": true
+	},
+	"rust-analyzer.checkOnSave": false
+}

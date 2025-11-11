@@ -1,0 +1,14 @@
+C:\Users\krivo\Desktop\Rust\media-hub\src-tauri\target2\debug\deps\thiserror-f83cb4fd6d2d698b.d: C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.17\src\lib.rs C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.17\src\aserror.rs C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.17\src\display.rs C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.17\src\var.rs C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.17\src\private.rs C:\Users\krivo\Desktop\Rust\media-hub\src-tauri\target2\debug\build\thiserror-13197be51d99b4de\out/private.rs
+
+C:\Users\krivo\Desktop\Rust\media-hub\src-tauri\target2\debug\deps\libthiserror-f83cb4fd6d2d698b.rlib: C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.17\src\lib.rs C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.17\src\aserror.rs C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.17\src\display.rs C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.17\src\var.rs C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.17\src\private.rs C:\Users\krivo\Desktop\Rust\media-hub\src-tauri\target2\debug\build\thiserror-13197be51d99b4de\out/private.rs
+
+C:\Users\krivo\Desktop\Rust\media-hub\src-tauri\target2\debug\deps\libthiserror-f83cb4fd6d2d698b.rmeta: C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.17\src\lib.rs C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.17\src\aserror.rs C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.17\src\display.rs C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.17\src\var.rs C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.17\src\private.rs C:\Users\krivo\Desktop\Rust\media-hub\src-tauri\target2\debug\build\thiserror-13197be51d99b4de\out/private.rs
+
+C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.17\src\lib.rs:
+C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.17\src\aserror.rs:
+C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.17\src\display.rs:
+C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.17\src\var.rs:
+C:\Users\krivo\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thiserror-2.0.17\src\private.rs:
+C:\Users\krivo\Desktop\Rust\media-hub\src-tauri\target2\debug\build\thiserror-13197be51d99b4de\out/private.rs:
+
+# env-dep:OUT_DIR=C:\\Users\\krivo\\Desktop\\Rust\\media-hub\\src-tauri\\target2\\debug\\build\\thiserror-13197be51d99b4de\\out
