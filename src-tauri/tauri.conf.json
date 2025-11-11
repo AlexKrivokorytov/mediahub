@@ -12,6 +12,9 @@
     "icon": ["icons/icon.ico"]
   },
   "app": {
+    "security": {
+      "capabilities": ["opener", "main-capability"]
+    },
     "windows": [
       {
         "label": "main",

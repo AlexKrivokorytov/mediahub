@@ -1,1 +1,1 @@
-{}
+{"main-capability":{"identifier":"main-capability","description":"Capability for the main window","local":true,"windows":["main"],"permissions":[{"identifier":"opener:allow-open-url","allow":[{"url":"https://tauri.app"},{"url":"custom:*"}]}]},"opener":{"identifier":"opener","description":"Allow opening external URLs from the app","local":true,"permissions":[{"identifier":"opener:allow-open-url","allow":[{"url":"https://tauri.app"},{"url":"custom:*"}]}]}}

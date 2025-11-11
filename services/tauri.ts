@@ -39,8 +39,13 @@ async function call<T>(cmd: string, payload?: any): Promise<T> {
 }
 
 export const tauriService = {
+  // Config
+  getConfigStatus: () => call<{ spotify_client: boolean; soundcloud: boolean; shikimori: boolean; discord: boolean }>('get_config_status'),
+
   // Spotify
   spotifyAuthenticate: (req: SpotifyAuthRequest) => call<string>('spotify_authenticate', { request: req }),
+  spotifyBeginAuth: (redirect_uri?: string) => call<string>('spotify_begin_auth', { redirect_uri }),
+  spotifyCompleteAuth: (code: string) => call<string>('spotify_complete_auth', { code }),
   spotifyGetPlaylists: () => call<string[]>('spotify_get_playlists'),
   spotifyGetTracks: () => call<string[]>('spotify_get_tracks'),
 
