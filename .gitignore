@@ -18,12 +18,12 @@ package-lock.json
 # =============================
 # Rust / Cargo
 # =============================
-# Rust build output
 target/
 target2/
+src-tauri/target/
 Cargo.lock
 
-# Generated schemas or bindings (if re-generated)
+# Generated schemas or bindings
 src-tauri/gen/
 
 # Ignore compiled binaries
@@ -48,18 +48,10 @@ src-tauri/gen/
 # =============================
 # OS Files
 # =============================
-# macOS
 .DS_Store
-.AppleDouble
-.LSOverride
-
-# Windows
 Thumbs.db
 ehthumbs.db
 Desktop.ini
-
-# Linux
-*~
 
 # =============================
 # Databases / App data
