@@ -17,6 +17,8 @@ async fn main() {
             commands::spotify::spotify_authenticate,
             commands::spotify::spotify_get_playlists,
             commands::spotify::spotify_get_tracks,
+            commands::soundcloud::soundcloud_authenticate,
+            commands::soundcloud::soundcloud_get_tracks,
             commands::shikimori::shikimori_authenticate,
             commands::shikimori::shikimori_get_anime_list,
             commands::discord::discord_authenticate,
