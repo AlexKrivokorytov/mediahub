@@ -26,6 +26,7 @@ pub async fn discord_authenticate(
 	};
 
 	db.save_credentials(creds)
+		.await
 		.map_err(|e| e.to_string())?;
 
 	Ok("Discord connected successfully".to_string())
@@ -38,6 +39,7 @@ pub async fn discord_send_message(
 ) -> Result<String, String> {
 	let creds = db
 		.get_credentials("discord")
+		.await
 		.map_err(|e| e.to_string())?
 		.ok_or("Discord not authenticated")?;
 

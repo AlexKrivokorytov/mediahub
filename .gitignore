@@ -29,9 +29,8 @@ src-tauri/.env.*
 target/
 src-tauri/target/
 target2/
+tauri-plugins/
 
-# App data (local DB)
-src-tauri/media_hub.db
 
 # IDE / Editors
 .vscode/

@@ -21,6 +21,7 @@ pub async fn soundcloud_authenticate(
 	};
 
 	db.save_credentials(creds)
+		.await
 		.map_err(|e| e.to_string())?;
 
 	Ok("SoundCloud connected successfully".to_string())
@@ -32,6 +33,7 @@ pub async fn soundcloud_get_tracks(
 ) -> Result<Vec<serde_json::Value>, String> {
 	let creds = db
 		.get_credentials("soundcloud")
+		.await
 		.map_err(|e| e.to_string())?
 		.ok_or("SoundCloud not authenticated")?;
 

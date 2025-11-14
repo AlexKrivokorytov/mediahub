@@ -10,8 +10,8 @@ use crate::commands::spotify::SpotifyAuthMemory;
 
 #[tokio::main]
 async fn main() {
-    let db = Database::new().expect("Failed to initialize database");
     let _ = dotenvy::dotenv();
+    let db = Database::new().await.expect("Failed to initialize database");
     // Load credentials from environment if present and persist to DB
     if let Ok(client_id) = std::env::var("SPOTIFY_CLIENT_ID") {
         let secret = std::env::var("SPOTIFY_CLIENT_SECRET").ok();
@@ -21,7 +21,7 @@ async fn main() {
             refresh_token: secret,
             expires_at: None,
         };
-        let _ = db.save_credentials(creds);
+        let _ = db.save_credentials(creds).await;
     }
     if let Ok(scid) = std::env::var("SOUNDCLOUD_CLIENT_ID") {
         let creds = services::database::UserCredentials {
@@ -30,7 +30,7 @@ async fn main() {
             refresh_token: None,
             expires_at: None,
         };
-        let _ = db.save_credentials(creds);
+        let _ = db.save_credentials(creds).await;
     }
     if let Ok(tok) = std::env::var("SHIKIMORI_TOKEN") {
         let creds = services::database::UserCredentials {
@@ -39,7 +39,7 @@ async fn main() {
             refresh_token: None,
             expires_at: None,
         };
-        let _ = db.save_credentials(creds);
+        let _ = db.save_credentials(creds).await;
     }
     if let Ok(bot) = std::env::var("DISCORD_BOT_TOKEN") {
         let creds = services::database::UserCredentials {
@@ -48,7 +48,7 @@ async fn main() {
             refresh_token: None,
             expires_at: None,
         };
-        let _ = db.save_credentials(creds);
+        let _ = db.save_credentials(creds).await;
     }
     let player: PlayerHandle = start_audio_engine();
     let spotify_mem = SpotifyAuthMemory::default();

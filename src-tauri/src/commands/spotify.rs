@@ -48,7 +48,7 @@ pub async fn spotify_authenticate(
 ) -> Result<String, String> {
     // If no client id provided, try using backend-stored credentials
     if request.client_id.trim().is_empty() {
-        let creds = db.get_credentials("spotify_client").map_err(|e| e.to_string())?
+        let creds = db.get_credentials("spotify_client").await.map_err(|e| e.to_string())?
             .ok_or_else(|| "Spotify client credentials not set on backend".to_string())?;
         let client_id = creds.access_token;
         let (pkce_challenge, pkce_verifier) = oauth2::PkceCodeChallenge::new_random_sha256();
@@ -64,7 +64,7 @@ pub async fn spotify_authenticate(
         access_token: request.client_id.clone(),
         refresh_token: Some(request.client_secret.clone()),
         expires_at: None,
-    }).map_err(|e| e.to_string())?;
+    }).await.map_err(|e| e.to_string())?;
 
     // Prepare PKCE using a spec-compliant random verifier (43-128 chars)
     let (pkce_challenge, pkce_verifier) = oauth2::PkceCodeChallenge::new_random_sha256();
@@ -86,7 +86,7 @@ pub async fn spotify_begin_auth(
     mem: State<'_, SpotifyAuthMemory>,
     redirect_uri: Option<String>,
 ) -> Result<String, String> {
-    let creds = db.get_credentials("spotify_client").map_err(|e| e.to_string())?
+    let creds = db.get_credentials("spotify_client").await.map_err(|e| e.to_string())?
         .ok_or_else(|| "Spotify client credentials not set on backend".to_string())?;
     let client_id = creds.access_token;
     let redirect = redirect_uri.unwrap_or_else(|| "http://127.0.0.1:3000".to_string());
@@ -113,7 +113,7 @@ pub async fn spotify_complete_auth(
     mem: State<'_, SpotifyAuthMemory>,
 ) -> Result<String, String> {
     // Load stored client creds
-    let creds = db.get_credentials("spotify_client").map_err(|e| e.to_string())?
+    let creds = db.get_credentials("spotify_client").await.map_err(|e| e.to_string())?
         .ok_or_else(|| "Spotify client credentials not set".to_string())?;
     let client_id = creds.access_token;
 
@@ -145,16 +145,16 @@ pub async fn spotify_complete_auth(
         access_token: tr.access_token,
         refresh_token: tr.refresh_token,
         expires_at: Some(expires_at.timestamp()),
-    }).map_err(|e| e.to_string())?;
+    }).await.map_err(|e| e.to_string())?;
 
     Ok("Spotify authenticated".into())
 }
 
 async fn refresh_access_token(db: &Database) -> Result<String, String> {
-    let token_row = db.get_credentials("spotify").map_err(|e| e.to_string())?
+    let token_row = db.get_credentials("spotify").await.map_err(|e| e.to_string())?
         .ok_or_else(|| "Spotify not authenticated".to_string())?;
     let refresh = token_row.refresh_token.ok_or_else(|| "No refresh token stored. Re-authenticate.".to_string())?;
-    let client_row = db.get_credentials("spotify_client").map_err(|e| e.to_string())?
+    let client_row = db.get_credentials("spotify_client").await.map_err(|e| e.to_string())?
         .ok_or_else(|| "Missing client credentials. Save in Settings.".to_string())?;
     let client_id = client_row.access_token;
     let client_secret_opt = client_row.refresh_token;
@@ -180,12 +180,12 @@ async fn refresh_access_token(db: &Database) -> Result<String, String> {
         access_token: tr.access_token,
         refresh_token: tr.refresh_token.or(Some(refresh)),
         expires_at: Some(expires_at.timestamp()),
-    }).map_err(|e| e.to_string())?;
-    Ok(db.get_credentials("spotify").map_err(|e| e.to_string())?.unwrap().access_token)
+    }).await.map_err(|e| e.to_string())?;
+    Ok(db.get_credentials("spotify").await.map_err(|e| e.to_string())?.unwrap().access_token)
 }
 
 async fn ensure_access_token(db: &Database) -> Result<String, String> {
-    if let Some(row) = db.get_credentials("spotify").map_err(|e| e.to_string())? {
+    if let Some(row) = db.get_credentials("spotify").await.map_err(|e| e.to_string())? {
         if let Some(exp) = row.expires_at {
             if Utc::now().timestamp() < exp - 60 { return Ok(row.access_token); }
         }

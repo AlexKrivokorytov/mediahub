@@ -30,6 +30,7 @@ pub async fn shikimori_authenticate(
 	};
 
 	db.save_credentials(creds)
+		.await
 		.map_err(|e| e.to_string())?;
 
 	Ok("Shikimori connected successfully".to_string())
@@ -41,6 +42,7 @@ pub async fn shikimori_get_anime_list(
 ) -> Result<Vec<AnimeEntry>, String> {
 	let creds = db
 		.get_credentials("shikimori")
+		.await
 		.map_err(|e| e.to_string())?
 		.ok_or("Shikimori not authenticated")?;
 
